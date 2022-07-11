@@ -1,0 +1,101 @@
+{
+  "id": "f60e12db-0bc1-496d-9235-8dc4a49dc58a",
+  "version": "2.0",
+  "name": "DOESP",
+  "url": "http://www.imprensaoficial.com.br/",
+  "tests": [{
+    "id": "8956505b-5032-4076-bece-e4a4398e021a",
+    "name": "DOESP_SELENIUM",
+    "commands": [{
+      "id": "982e4679-290e-4ff2-a925-b9410e653448",
+      "comment": "",
+      "command": "open",
+      "target": "http://www.imprensaoficial.com.br/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11beae83-de10-495a-a2f4-2fea0bd24773",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1031",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8bb277c-c27b-4372-b979-7e586773c656",
+      "comment": "",
+      "command": "click",
+      "target": "id=content_txtPalavrasChave",
+      "targets": [
+        ["id=content_txtPalavrasChave", "id"],
+        ["name=ctl00$content$txtPalavrasChave", "name"],
+        ["css=#content_txtPalavrasChave", "css:finder"],
+        ["xpath=//input[@id='content_txtPalavrasChave']", "xpath:attributes"],
+        ["xpath=//div[@id='buscaporpalavra']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f00c363c-3ab4-44a3-b3e4-d84aaeb98ae7",
+      "comment": "",
+      "command": "type",
+      "target": "id=content_txtPalavrasChave",
+      "targets": [
+        ["id=content_txtPalavrasChave", "id"],
+        ["name=ctl00$content$txtPalavrasChave", "name"],
+        ["css=#content_txtPalavrasChave", "css:finder"],
+        ["xpath=//input[@id='content_txtPalavrasChave']", "xpath:attributes"],
+        ["xpath=//div[@id='buscaporpalavra']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "\"Raul Cruz Nadim\""
+    }, {
+      "id": "666bac69-1e98-4cbf-a83a-b27df167efba",
+      "comment": "",
+      "command": "click",
+      "target": "id=content_btnBuscar",
+      "targets": [
+        ["id=content_btnBuscar", "id"],
+        ["name=ctl00$content$btnBuscar", "name"],
+        ["css=#content_btnBuscar", "css:finder"],
+        ["xpath=//input[@id='content_btnBuscar']", "xpath:attributes"],
+        ["xpath=//div[@id='buscaporpalavra']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d60a0a18-eb49-4caa-8c7e-ed0795df8bd8",
+      "comment": "",
+      "command": "click",
+      "target": "id=content_lnkOrderByData",
+      "targets": [
+        ["id=content_lnkOrderByData", "id"],
+        ["linkText=Data", "linkText"],
+        ["css=#content_lnkOrderByData", "css:finder"],
+        ["xpath=//a[contains(text(),'Data')]", "xpath:link"],
+        ["xpath=//a[@id='content_lnkOrderByData']", "xpath:attributes"],
+        ["xpath=//div[@id='divOrdenacao']/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$content$lnkOrderByData','')\")]", "xpath:href"],
+        ["xpath=//div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Data')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdff60a7-f0d9-4167-9fb6-8c18cd4c5213",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ef14fe82-6f10-454c-afe9-4abc86be800f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8956505b-5032-4076-bece-e4a4398e021a"]
+  }],
+  "urls": ["http://www.imprensaoficial.com.br/"],
+  "plugins": []
+}
