@@ -14,7 +14,6 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import datetime
 
 
-PATH = "C:\chromedriver_win32\chromedriver.exe"
 # driver = webdriver.Chrome(PATH)
 hoje = datetime.datetime.now()
 dd = hoje.day
@@ -24,7 +23,7 @@ data = str(dd)+'/'+str(mm)+'/'+str(aa)
 
 class TestDOESPSELENIUM():
   def setup_method(self, method):
-    self.driver = webdriver.Chrome(PATH)
+    self.driver = webdriver.Chrome() #no ubuntu, não é necessário colocar o PATH
     self.vars = {}
   
   def teardown_method(self, method):
@@ -36,7 +35,8 @@ class TestDOESPSELENIUM():
     self.driver.find_element(By.ID, "content_txtPalavrasChave").click()
     self.driver.find_element(By.ID, "content_txtPalavrasChave").send_keys("\"Raul Cruz Nadim\"")
     self.driver.find_element(By.ID, "content_btnBuscar").click()
-    self.driver.find_element_by_class_name("joyride-close-tip").click()
+    time.sleep(1)
+    self.driver.find_element(By.CLASS_NAME, "joyride-close-tip").click() #WebDriver do ubuntu não possui o atributo 'find_element_by_class_name', por isso foi utilizado outro método para fechar a caixa de diálogo
     self.driver.find_element(By.ID, "content_lnkOrderByData").click()
     
     data_publi_elem = self.driver.find_element(By.ID, "content_dtgResultado_lblData_0")

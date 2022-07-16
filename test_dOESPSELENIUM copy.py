@@ -13,8 +13,6 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 import datetime
 
-
-PATH = "C:\chromedriver_win32\chromedriver.exe"
 # driver = webdriver.Chrome(PATH)
 hoje = datetime.datetime.now()
 dd = hoje.day
@@ -24,14 +22,15 @@ data = str(dd)+'/'+str(mm)+'/'+str(aa)
 
 
 
-driver = webdriver.Chrome(PATH)
+driver = webdriver.Chrome()
 
 driver.get("http://www.imprensaoficial.com.br/#"+data) #colocar o dia de hj
 driver.set_window_size(1900, 980)
 driver.find_element(By.ID, "content_txtPalavrasChave").click()
 driver.find_element(By.ID, "content_txtPalavrasChave").send_keys("\"Raul Cruz Nadim\"")
 driver.find_element(By.ID, "content_btnBuscar").click()
-driver.find_element_by_class_name("joyride-close-tip").click()
+time.sleep(1)
+driver.find_element(By.CLASS_NAME, "joyride-close-tip").click() #WebDriver do ubuntu não possui o atributo 'find_element_by_class_name', por isso foi utilizado outro método para fechar a caixa de diálogo
 driver.find_element(By.ID, "content_lnkOrderByData").click()
 
 #pega a data da última públicação
